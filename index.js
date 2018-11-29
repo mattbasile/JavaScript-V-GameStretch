@@ -36,7 +36,19 @@ const bear = new Characters({
     }
     secretMove: {
         "Bear Hug": function(){
-            return Math.floor(Math.random() * Math.floor(0))
+            return Math.floor(Math.random() * Math.floor(20))
+        }
+    }
+});
+const harpy = new Characters({
+    name: "Harpy",
+    health: 150,
+    weapon: {
+        "Silver Beak": 15,
+    }
+    secretMove: {
+        "Lust to Death": function(){
+            return Math.floor(Math.random() * Math.floor(30))
         }
     }
 });
