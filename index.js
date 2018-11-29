@@ -24,7 +24,19 @@ const wizard = new Characters({
     }
     secretMove: {
         "Black Magic": function(){
-            return Math.floor(Math.random() * Math.floor(10))
+            return Math.floor(Math.random() * Math.floor(15))
+        }
+    }
+});
+const bear = new Characters({
+    name: "Grizz",
+    health: 175,
+    weapon: {
+        "Long Claw": 20,
+    }
+    secretMove: {
+        "Bear Hug": function(){
+            return Math.floor(Math.random() * Math.floor(0))
         }
     }
 });
