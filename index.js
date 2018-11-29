@@ -52,3 +52,15 @@ const harpy = new Characters({
         }
     }
 });
+const groot = new Characters({
+    name: "Grunt",
+    health: 250,
+    weapon: {
+        "Chain Saw": 10,
+    }
+    secretMove: {
+        "Timber!": function(){
+            return Math.floor(Math.random() * Math.floor(20))
+        }
+    }
+});
