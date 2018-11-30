@@ -104,6 +104,7 @@ function selectCharMain(){
    const key = this.innerHTML.toLowerCase();
    const char = team[key];
    document.querySelector(".charImgOne").src=`${char.image}`;
+   document.querySelector(".main-title").innerHTML=`Warrior: ${char.name}`;
    document.querySelector(".main .health").innerHTML=`Health:${char.health}`;
 }
 
@@ -111,6 +112,7 @@ function selectCharSec(){
     const key = this.innerHTML.toLowerCase();
     const char = team[key];
     document.querySelector(".charImgTwo").src=`${char.image}`;
+    document.querySelector(".secondary-title").innerHTML=`Warrior: ${char.name}`;
     document.querySelector(".secondary .health").innerHTML=`Health:${char.health}`;   
  }
 
