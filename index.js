@@ -28,7 +28,7 @@ const wizard = new Characters({
             return Math.floor(Math.random() * Math.floor(15))
         }
     },
-    image: "img/",
+    image: `<img src="img/wizard.jpeg>`,
 });
 const bear = new Characters({
     name: "Grizz",
@@ -41,7 +41,7 @@ const bear = new Characters({
             return Math.floor(Math.random() * Math.floor(20))
         }
     },
-    image: "img/",
+    image: `img/grizz.jpg`,
 });
 const harpy = new Characters({
     name: "Harpy",
@@ -69,5 +69,11 @@ const grunt = new Characters({
     },
     image: "img/",
 });
+const team = {
+    grunt,
+    harpy,
+    bear,
+    wizard,
+}
 
-
+console.log(team.grunt.name);
