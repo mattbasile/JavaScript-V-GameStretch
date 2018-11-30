@@ -5,6 +5,7 @@ class Characters {
         this.weapon = attributes.weapon;
         this.secretMove = attributes.secretMove;
         this.image = attributes.image;
+        this.healCount = attributes.healCount;
     }
     attack(){
         
@@ -14,6 +15,25 @@ class Characters {
     }
     heal(){
 
+    }
+}
+class mainChar extends Characters{
+    constructor(mainCharAttr){
+        super(mainCharAttr);
+        this.isAlive = mainCharAttr.isAlive;
+    }
+    alive(){
+        if(this.health > 0){
+            return true
+        }
+        else{
+            return false;
+        }
+    }
+}
+class secChar extends mainChar{
+    constructor(secCharAttr){
+        super(secCharAttr);
     }
 }
 
@@ -29,6 +49,7 @@ const wizard = new Characters({
         }
     },
     image: "img/wizard.jpeg",
+    healCount: 4,
 });
 const grizz = new Characters({
     name: "Grizz",
@@ -42,6 +63,7 @@ const grizz = new Characters({
         }
     },
     image: "img/grizz.jpg",
+    healCount: 2,
 });
 const harpy = new Characters({
     name: "Harpy",
@@ -55,6 +77,7 @@ const harpy = new Characters({
         }
     },
     image: "img/harpy.png",
+    healCount: 3,
 });
 const grunt = new Characters({
     name: "Grunt",
@@ -68,6 +91,7 @@ const grunt = new Characters({
         }
     },
     image: "img/grunt.jpg",
+    healCount: 3,
 });
 const team = {
     grunt,
@@ -80,12 +104,28 @@ function selectCharMain(){
    const key = this.innerHTML.toLowerCase();
    const char = team[key];
    document.querySelector(".charImgOne").src=`${char.image}`;
-   document.querySelector(".health").innerHTML=`Health:${char.health}`;
+   document.querySelector(".main .health").innerHTML=`Health:${char.health}`;
 }
 
 function selectCharSec(){
     const key = this.innerHTML.toLowerCase();
     const char = team[key];
     document.querySelector(".charImgTwo").src=`${char.image}`;
-    ldocument.querySelector(".health").innerHTML=`Health:${char.health}`;   
+    document.querySelector(".secondary .health").innerHTML=`Health:${char.health}`;   
  }
+
+ function attack(){
+     console.log(this.parentElement.parentElement)
+     if(this.parentElement.parentElement == document.querySelector(".main")){
+        this.call(team);
+        console.log(this)
+        let opponent = document.querySelector(".secondary . health");
+        
+        
+     } else{
+         console.log(``)
+     }
+ }
+
+ 
+

@@ -11,30 +11,34 @@
 <body>
 <h1>A New Battle Game!</h1>
 <section class="arena">
-    <div class="column">
+    <div class="column main">
         <div class="charSelect">
             <button onclick="selectCharMain.call(this)" class="wizard">Wizard</button>
             <button onclick="selectCharMain.call(this)" class="bear">Grizz</button>
             <button onclick="selectCharMain.call(this)" class="harpy">Harpy</button>
             <button onclick="selectCharMain.call(this)" class="grunt">Grunt</button>
         </div>
-        <img class="charImgOne" src="" alt="">
-        <p class="health"></p>
+        <img class="charImgOne" src="img/wizard.jpeg" alt="">
+        <p class="health">
+            Health: 200
+        </p>
         <div>
-            <button>Attack</button>
+            <button onclick="attack.call(this)">Attack</button>
             <button>Special</button>
         </div>
             <button>Heal</button>
     </div>
-    <div class="column">
+    <div class="column secondary">
             <div class="charSelect">
                 <button onclick="selectCharSec.call(this)" class="wizard">Wizard</button>
                 <button onclick="selectCharSec.call(this)" class="bear">Grizz</button>
                 <button onclick="selectCharSec.call(this)" class="harpy">Harpy</button>
                 <button onclick="selectCharSec.call(this)" class="grunt">Grunt</button>
             </div>
-            <img class="charImgTwo" src="" alt="">
-            <p class="health"></p>
+            <img class="charImgTwo" src="img/harpy.png" alt="">
+            <p class="health">
+                Health: 150
+            </p>
             <div>
                 <button>Attack</button>
                 <button>Special</button>
