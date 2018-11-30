@@ -28,9 +28,9 @@ const wizard = new Characters({
             return Math.floor(Math.random() * Math.floor(15))
         }
     },
-    image: `<img src="img/wizard.jpeg>`,
+    image: "img/wizard.jpeg",
 });
-const bear = new Characters({
+const grizz = new Characters({
     name: "Grizz",
     health: 175,
     weapon: {
@@ -41,7 +41,7 @@ const bear = new Characters({
             return Math.floor(Math.random() * Math.floor(20))
         }
     },
-    image: `img/grizz.jpg`,
+    image: "img/grizz.jpg",
 });
 const harpy = new Characters({
     name: "Harpy",
@@ -54,7 +54,7 @@ const harpy = new Characters({
             return Math.floor(Math.random() * Math.floor(30))
         }
     },
-    image: "img/",
+    image: "img/harpy.png",
 });
 const grunt = new Characters({
     name: "Grunt",
@@ -67,13 +67,25 @@ const grunt = new Characters({
             return Math.floor(Math.random() * Math.floor(20))
         }
     },
-    image: "img/",
+    image: "img/grunt.jpg",
 });
 const team = {
     grunt,
     harpy,
-    bear,
+    grizz,
     wizard,
 }
 
-console.log(team.grunt.name);
+function selectCharMain(){
+   const key = this.innerHTML.toLowerCase();
+   const char = team[key];
+   document.querySelector(".charImgOne").src=`${char.image}`;
+   document.querySelector(".health").innerHTML=`Health:${char.health}`;
+}
+
+function selectCharSec(){
+    const key = this.innerHTML.toLowerCase();
+    const char = team[key];
+    document.querySelector(".charImgTwo").src=`${char.image}`;
+    ldocument.querySelector(".health").innerHTML=`Health:${char.health}`;   
+ }
